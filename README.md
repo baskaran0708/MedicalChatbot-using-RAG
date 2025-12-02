@@ -1,30 +1,8 @@
-# 🏥 Medical Chatbot with LLMs, LangChain, Pinecone & Flask
+# Medical Chatbot with LLMs, LangChain, Pinecone & Flask
 
 An intelligent medical chatbot powered by Large Language Models (LLMs), LangChain, Pinecone vector database, and Flask. This chatbot provides medical information by leveraging Retrieval-Augmented Generation (RAG) from PDF documents and web search fallback for comprehensive answers.
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Flask](https://img.shields.io/badge/Flask-3.1.1-green.svg)
-![LangChain](https://img.shields.io/badge/LangChain-0.3.26-orange.svg)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-
-## 📋 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Architecture](#-architecture)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Usage](#-usage)
-- [Project Structure](#-project-structure)
-- [How It Works](#-how-it-works)
-- [Deployment](#-deployment)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
-
-## 🎯 Project Overview
+##  Project Overview
 
 This medical chatbot is designed to answer medical queries using a combination of:
 1. **RAG (Retrieval-Augmented Generation)**: Retrieves relevant information from medical PDF documents stored in Pinecone vector database
