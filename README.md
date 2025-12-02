@@ -11,18 +11,18 @@ This medical chatbot is designed to answer medical queries using a combination o
 
 The chatbot features a modern, minimalist web interface with a medical-themed design and provides accurate, contextual medical information.
 
-## ✨ Features
+##  Features
 
-- 🔍 **Intelligent Query Processing**: Handles medical questions with context-aware responses
-- 📚 **PDF Knowledge Base**: Extracts and indexes medical information from PDF documents
-- 🌐 **Web Search Integration**: Falls back to web search for queries not covered in the knowledge base
-- 🤖 **Advanced LLM**: Uses Mistral-7B-Instruct model for natural language understanding
-- 💬 **Interactive Chat Interface**: Clean, responsive web UI with chat history
-- 📝 **Comprehensive Logging**: Detailed request/response logging for monitoring and debugging
-- 🎨 **Modern UI Design**: Minimalist, Apple-inspired design with medical color scheme
-- ⚡ **Fast Retrieval**: Vector similarity search using Pinecone for quick information retrieval
+-  **Intelligent Query Processing**: Handles medical questions with context-aware responses
+-  **PDF Knowledge Base**: Extracts and indexes medical information from PDF documents
+-  **Web Search Integration**: Falls back to web search for queries not covered in the knowledge base
+-  **Advanced LLM**: Uses Mistral-7B-Instruct model for natural language understanding
+-  **Interactive Chat Interface**: Clean, responsive web UI with chat history
+-  **Comprehensive Logging**: Detailed request/response logging for monitoring and debugging
+-  **Modern UI Design**: Minimalist, Apple-inspired design with medical color scheme
+-  **Fast Retrieval**: Vector similarity search using Pinecone for quick information retrieval
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────┐
@@ -62,7 +62,7 @@ The chatbot features a modern, minimalist web interface with a medical-themed de
 └─────────────────┘
 ```
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Backend
 - **Flask**: Web framework for serving the application
@@ -81,7 +81,7 @@ The chatbot features a modern, minimalist web interface with a medical-themed de
 - **PyPDF**: PDF document loading and parsing
 - **RecursiveCharacterTextSplitter**: Intelligent text chunking
 
-## 📦 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following:
 
@@ -93,7 +93,7 @@ Before you begin, ensure you have the following:
   - [OpenRouter](https://openrouter.ai/) (for LLM access)
   - [OpenAI](https://openai.com/) (optional, for alternative models)
 
-## 🚀 Installation
+##  Installation
 
 ### Step 1: Clone the Repository
 
@@ -126,7 +126,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Step 1: Create Environment File
 
@@ -145,13 +145,6 @@ OPENROUTER_API_KEY=your_openrouter_api_key_here
 
 Place your medical PDF documents in the `data/` directory:
 
-```bash
-data/
-  ├── medical_book_1.pdf
-  ├── medical_book_2.pdf
-  └── ...
-```
-
 ### Step 3: Create Pinecone Index and Store Embeddings
 
 Run the indexing script to process PDFs and create the vector database:
@@ -169,7 +162,7 @@ This script will:
 
 > **Note**: This process may take several minutes depending on the size of your PDF documents.
 
-## 🎮 Usage
+##  Usage
 
 ### Running the Application
 
@@ -197,44 +190,8 @@ The application will be available at: **http://localhost:8080**
 - "What causes migraine headaches?"
 - "Explain the difference between Type 1 and Type 2 diabetes"
 
-## 📁 Project Structure
 
-```
-medical-chatbot/
-│
-├── app.py                      # Main Flask application
-├── store_index.py              # Script to create Pinecone index
-├── requirements.txt            # Python dependencies
-├── setup.py                    # Package setup file
-├── .env                        # Environment variables (not in repo)
-├── .gitignore                  # Git ignore rules
-├── Dockerfile                  # Docker configuration
-│
-├── src/                        # Source code modules
-│   ├── __init__.py
-│   ├── helper.py               # Helper functions for PDF processing
-│   └── prompt.py               # System prompts for LLM
-│
-├── data/                       # Medical PDF documents
-│   └── *.pdf
-│
-├── templates/                  # HTML templates
-│   ├── index.html              # Landing page
-│   └── chat.html               # Chat interface
-│
-├── static/                     # Static assets
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
-├── logs/                       # Application logs
-│   └── chatbot.log
-│
-└── research/                   # Research notebooks
-    └── trials.ipynb
-```
-
-## 🔍 How It Works
+##  How It Works
 
 ### 1. Document Processing Pipeline
 
@@ -278,15 +235,6 @@ docsearch = PineconeVectorStore.from_documents(
 
 All interactions are logged with unique request IDs:
 
-```
-[20251202_211230_123456] NEW REQUEST: 'What is diabetes?'
-[20251202_211230_123456] Client IP: 127.0.0.1
-[20251202_211230_123456] Attempting RAG retrieval...
-[20251202_211230_123456] SOURCE: RAG (PDF Knowledge Base)
-[20251202_211230_123456] RESPONSE: Diabetes is a chronic condition...
-[20251202_211230_123456] REQUEST COMPLETED
-```
-
 ## 🌐 Deployment
 
 ### Docker Deployment
@@ -321,28 +269,6 @@ export FLASK_ENV=production
 export FLASK_DEBUG=False
 ```
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Issue**: `ModuleNotFoundError: No module named 'src'`
-- **Solution**: Run `pip install -e .` to install the package in editable mode
-
-**Issue**: Pinecone connection errors
-- **Solution**: Verify your API key and ensure the index name matches in both `store_index.py` and `app.py`
-
-**Issue**: LLM responses contain artifacts like `<s>` or `[INST]`
-- **Solution**: The cleanup code in `app.py` should handle this. If issues persist, add more cleanup patterns
-
-**Issue**: Web search not working
-- **Solution**: Check your internet connection and ensure `duckduckgo-search` is properly installed
-
-**Issue**: Slow response times
-- **Solution**: 
-  - Reduce `max_tokens` in the LLM configuration
-  - Decrease `k` value in retriever (currently 3)
-  - Consider upgrading Pinecone plan for faster queries
-
 ### Logs
 
 Check the logs for detailed error information:
@@ -351,7 +277,7 @@ Check the logs for detailed error information:
 tail -f logs/chatbot.log
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -372,7 +298,7 @@ Contributions are welcome! Please follow these steps:
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **LangChain** for the excellent LLM framework
 - **Pinecone** for vector database infrastructure
@@ -380,10 +306,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 - **OpenRouter** for LLM API access
 - **Mistral AI** for the Mistral-7B-Instruct model
 
-## 📧 Contact
+##  Contact
 
 For questions or support, please open an issue on GitHub.
 
 ---
 
-**⚠️ Disclaimer**: This chatbot is for informational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
+** Disclaimer**: This chatbot is for informational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
