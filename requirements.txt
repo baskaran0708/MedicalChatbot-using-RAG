@@ -7,5 +7,5 @@ langchain-pinecone==0.2.8
 langchain-openai==0.3.24
 langchain-community==0.3.26
 langchain-huggingface
-duckduckgo-search==7.0.0
+duckduckgo-search==8.1.1
 -e .
