@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBot - Your AI Medical Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7V12C2 16.97 5.84 21.5 12 22C18.16 21.5 22 16.97 22 12V7L12 2Z"
+                        stroke="currentColor" stroke-width="2" />
+                </svg>
+                <span>MediBot</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="/chat" class="nav-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Your health questions.<br>Answered instantly.</h1>
+                <p class="hero-subtitle">
+                    Get accurate medical information powered by advanced AI.
+                    Available 24/7 to help you understand symptoms, conditions, and treatments.
+                </p>
+                <div class="cta-group">
+                    <a href="/chat" class="cta-primary">Start Consultation</a>
+                    <a href="#features" class="cta-secondary">Learn More</a>
+                </div>
+                <div class="hero-image">
+                    <div class="chat-preview">
+                        <div class="preview-header">
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                        </div>
+                        <div class="preview-messages">
+                            <div class="preview-msg bot">
+                                <div class="msg-bubble">Hello! How can I help you today?</div>
+                            </div>
+                            <div class="preview-msg user">
+                                <div class="msg-bubble">What is diabetes?</div>
+                            </div>
+                            <div class="preview-msg bot">
+                                <div class="msg-bubble">Diabetes is a disorder of carbohydrate metabolism...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why choose MediBot?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Instant Answers</h3>
+                    <p>Get immediate responses to your medical questions, available 24/7</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 11L12 14L22 4M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Accurate Information</h3>
+                    <p>Powered by verified medical knowledge and AI technology</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Easy to Use</h3>
+                    <p>Simple chat interface - just ask your question naturally</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Medical knowledge.<br>At your fingertips.</h2>
+                <p>MediBot uses advanced AI to provide accurate medical information based on verified sources. Whether
+                    you're curious about symptoms, conditions, or treatments, we're here to help you understand your
+                    health better.</p>
+                <a href="/chat" class="link-arrow">
+                    Start your consultation
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7V12C2 16.97 5.84 21.5 12 22C18.16 21.5 22 16.97 22 12V7L12 2Z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span>MediBot</span>
+                </div>
+                <p class="footer-text">AI-Powered Medical Assistant</p>
+                <p class="disclaimer">This is an AI assistant for informational purposes only. Always consult a
+                    healthcare professional for medical advice.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
